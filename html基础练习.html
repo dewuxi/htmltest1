@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<title>html基础练习</title>
+<head>
+    <script type="text/javascript" language="javascript">
+    function email()
+    {
+       with(emal)
+       {
+            apos=value.indexOf("@");
+            dotpos=value.lastIndexOf(".");
+            if(apos<1||dotpos-apos<2)
+            {
+                span1.innerText="请输入正确格式";
+            }
+        }
+    }
+    function erase(field)
+    {
+        field.innerText="";
+    }
+    function paswod1()
+    {
+        with(psd1)
+        {
+            var r=/^A-Za-z$/;
+            if(isNaN(value)==true&&r.test(value)==true)
+            {
+                pass;
+            }
+            else
+            {
+                span2.innerText="请输入字母和数字";
+            }
+            if(value.length<6||value.length>16)
+            {
+                span2.innerText="请输入6到16位密码";
+            }
+        }
+    }
+    function paswod2()
+    {
+        if(psd2.value==psd1.value)
+            {
+            span3.innerText="两次输入请一致";
+            }
+        with(psd2)
+        {
+            var r=/^A-Za-z$/;
+            if(isNaN(value)==true&&r.test(value)==true)
+            {
+                pass;
+            }
+            else
+            {
+                span3.innerText="请输入字母和数字";
+            }
+            if(value.length<6||value.length>16)
+            {
+                span3.innerText="请输入6到16位密码";
+            }
+        }
+    }
+    </script>
+    <style type="text/css">
+        body{
+            background-color: black;
+        }
+        .site{
+            background-color: #eee;
+            width: 80%;
+            margin: auto auto;
+        }
+        .title{
+            height: 50px;
+            background-color: #333;
+        }
+        .biao{
+            float: right;
+            margin-right: 20px;
+        }
+        .lie{
+            display: inline;
+        }
+        .lie a{
+            color: white;
+            text-decoration: none;
+            font-size: small;
+            margin-left: 10px;
+        }
+        .lie a:hover{
+            color: gray;
+        }
+       .one{
+            margin: 20px;
+            border: 1px #999 solid;
+            background-color: white;
+            padding: 0px 20px 0px 20px;
+        }
+        .one h2,#p1{
+            color: gray;
+        }
+        .one a{
+            color: blue;
+        }
+        .one a:hover{
+            color: #551A8B;
+        }
+        .two{
+            margin: 20px;
+            border: 1px #999 solid;
+            background-color: white;
+            padding: 0px 20px 0px 20px;
+        }
+        .two h2,#p2{
+            color: gray;
+        }
+        .two a{
+            color: blue;
+        }
+        .two a:hover{
+            color: #551A8B;
+        }
+
+        .three{
+            margin: 20px;
+            border: 1px #999 solid;
+            background-color: white;
+            padding: 0 20px 0px 20px;
+        }
+        .picture{
+            margin: 20px;
+            border: 1px #999 solid;
+            background-color: white;
+            padding: 0px 20px 0px 20px;
+        }
+        .picture .pic{
+            border: 1px #999 solid;
+            max-width: 100%;
+            padding: 0 20px;
+            margin: 20px; 
+        }
+        .main{
+            float: left;
+            margin-right: 460px;
+                    }
+        .left{
+            top: 0;
+            right: 0;
+            float: right;
+            position: absolute;
+            width: 400px;
+            margin-top: 22px;
+            margin-right: 20px;
+            padding: 0 20px 18px 20px;
+            border: 1px #999 solid;
+            background-color: white;
+        }
+        table{
+            width: 100%; 
+        }
+        th{
+            background-color: #333;
+            color: white;
+            text-align: left;
+            padding-left: 5px;
+        }
+        td{
+            padding-left: 5px;
+        }
+        .total{
+            background-color: #eee;
+        }
+        .login{
+        }
+        #paddr{
+            color: #999;
+            font-size: small;
+        }
+        #ppass{
+            color: #999;
+            font-size: small;
+        }
+        #button{
+            background-color: blue;
+            color: white;
+            width: 100%;
+            padding: .5em 2em .55em;
+            border-radius: .5em; 
+        }
+        #text{
+            width: 250px;
+            height: 100px;
+        }
+        .radio{
+            color: blue;
+        }
+        .bottom{
+            text-align: center;
+            background-color: black;
+            height: 50px;
+        }
+        .bottom p{
+            color: white;
+            font-size: small;
+            line-height: 50px;
+        }
+        .clear{
+            clear: both;
+        }
+        .contenter{
+            position: relative;
+        }
+        .form{
+            display: block;
+        }
+        .span{
+            color: red;
+            font-size: small;
+        }
+    </style>
+</head>
+<div class="site">
+    <div class="title">
+        <img src="title.png" alt="title pic"/>
+            <ul class="biao">
+                <li class="lie"><a href="http://www.baidu.com">文库</a></li>
+                <li class="lie"><a href="http://www.baidu.com">地图</a></li>
+                <li class="lie"><a href="http://www.baidu.com">贴吧</a></li>
+                <li class="lie"><a href="http://www.baidu.com">神乐之歌</a></li>
+            </ul>
+    </div>
+    <div class="contenter">
+        <div class="left">
+            <p><b>游客注册</b></p>
+            <div class="login">
+            <form action="" method="POST">
+
+            请输入邮箱：<input id="emal" onblur="email()" onfocus="erase(span1)" class="form" type="text" value=""><span class="span" id="span1"></span>
+            <p id="paddr">邮箱地址请按格式要求输入 xx@xx.xx</p>
+
+            请输入密码: <input id="psd1" onblur="paswod1()" onfocus="erase(span2)" class="form" type="password"><span class="span" id="span2"></span><br/>
+            请重复输入密码: <input id="psd2" onblur="paswod2()" onfocus="erase(span3)" class="form" type="password"><span class="span" id="span3"></span>
+            <p id="ppass">密码请为6-16位英文数字</p>
+
+            性别：
+            <input class="radio" id="man" type="radio" name="sex" value="男" checked>男
+            <input class="radio" id="woman" type="radio" name="sex" value="女">女 
+            <br/>
+            城市：
+            <select id="city">
+                <option>北京</option>
+                <option>上海</option>
+                <option>成都</option>
+            </select>
+            <br/>
+            爱好：<input type="checkbox">运动
+                  <input type="checkbox">艺术
+                  <input type="checkbox">科学
+            <p>个人描述：</p><textarea class="form" id="text">这是一个多行输入框，输入您的个人描述</textarea>
+            <button id="button" type="button" onclick="alert('提交成功')">确认提交</button>
+            </form>
+            </div>
+        </div>
+        <div class="main">
+            <div class="one">
+                <h1>欧洲旅游攻略</h1>
+                <h2>自由行</h2>
+                <p id="p1">神月离人 2017.7.20</p>
+                微博链接：<a href="http://weibo.com/godmoon?tt=&is_hot=1#_rnd1504147672463">http://weibo.com/godmoon?tt=&is_hot=1#_rnd1504147672463</a>
+                <p>
+                    华沙，一个拥有绝美天空的城市，可我觉得我不会再来。<br/>一直觉得一个国家的素养很重要，而华沙显然超越了底线。众所周知很多换钱所的价格不厚道，多在机场火车站景区，但这种价格差我认为是有底线的，在总统府对面的换钱居然堂而皇之的坑比<b>四分之一</b>还多也是没下限。当然我自己也要负责，懒得戴眼镜还相信人家似是而非的回答。但我觉得你只要一放下戒心就会被砍一刀的地方，绝不是为了放松旅行的安居之地。很可惜，曾经是波兰充满好感的我如今却将它移入了黑名单，也莫怪我的英文老师自己是个波兰人却看不起华沙。<br/>
+                    <img src="p1.jpg" alt="pic disappear"/>
+                    <img src="p2.jpg" alt="pic disappear"/>
+                    <img src="p3.jpg" alt="pic disappear"/>
+                    <img src="p4.jpg" alt="pic disappear"/>
+                <p/>
+                <p>Day1，传说中的水果市场！</p>
+                <p>
+                    随便怎么拍都让人垂涎欲滴，颜色耀得根本不用P，人也多得好像回了国…有很多旅客就挤在小小的店门口，等待老板将美食一一送上，交头接耳聊天吃饭，颇有一番情趣。图7是一家客满到无法等的店，门口贴满了名人光顾的照片，大隐隐于市，在巴塞好多名店都维持着曾经的规模，却永远不缺客人。脑子还在食物中依依不舍的出来就被门口搔首弄姿的长腿美女吓了一跳，裙子始终飞舞在天际，奔放得让人冷汗直流！走近才发现…是个汉子啊啊啊啊！真是让女性同胞神伤的身材[捂脸]，瞬间食物就从我脑海中跑了，只余2个字:<b>减肥</b>！<a href="http://www.baidu.com" target="_blank">链接</a><br/>
+                    <img src="p5.jpg" alt="pic disappear"/>
+                    <img src="p6.jpg" alt="pic disappear"/>
+                    <img src="p7.jpg" alt="pic disappear"/>
+                    <img src="p8.jpg" alt="pic disappear"/>
+                </p>
+            </div>
+        
+            <div class="two">
+                <h1>电影推荐</h1>
+                <h2>沉睡魔咒</h2>
+                <p id="p2">神月离人 2017.6.11</p>
+                <p>《沉睡魔咒》，适合英文学习的女巫版睡美人，从另一个角度说童话，切入点十分有趣，让人一开始就产生了期待。<br/>迪斯尼的影片一贯的美轮美奂在这一部里更是惊艳，构架出一个仿若仙境的精灵世界，只是看着那幻境一般的美丽就让人陶醉。略显简单的剧情因为茱莉亚罗伯茨强大的气场，让整部片子毫不失色。朱莉亚因为背叛而生魔，在利益面前爱情如此脆弱，痛苦的演绎让受过情伤的人必然产生共鸣。可感情的伤又怎么可能完全泯灭人性，朱莉亚即便披上了黑女巫的外袍，也依然不失纯真的爱逗趣，逗着逗着甚至对仇人的女儿产生了感情，细腻的感情线和真爱之吻的反转，丰满的结局和有力的结束语让整部片子在最后10分一下提升了几个档次！好看！痛快！<a href="http://www.baidu.com" target="_blank">链接</a></p>
+                <img src="t1.jpg" alt="t1.jpg diss"/>
+                <ol>
+                    <li>迪斯尼</li>
+                    <li>睡美人</li>
+                    <li>黑女巫</li>
+                </ol>
+                <h2>别让我走</h2>
+                <p>《别让我走》，旅途中没有先看介绍是我的罪！后悔看这部剧不是因为故事不好，而是太好、太深刻，太多的感触涌上心头让今天一早要赶火车的我差点失眠！故事讲述一群过着与世隔绝生活的少年们，被人淘汰的玩具到了他们这里是最好的集市。虽然过着宛若孤岛的校园生活，但他们也有爱有梦，可突然有一天他们得知自己不过是用来捐献器官的克隆载体，他们没有未来，只有一次次的从身体里掏出脏腑。从震惊到愤怒到麻木，背叛，绝望环绕着他们，看似美轮美奂的英伦风格一下变得那样压抑，让人恨不得大喊出来的百感化作女主最后的一句自问：我们和我们要救的人的差别到底在哪里？这是一部没有流泪却比痛哭一场更为悲伤的电影，直到今天依然深深陷在剧情里，即使是最讨厌悲剧和开放式结局的我，也不得不说这两者兼而有之的电影确实是一部发人深省和学习英文的好剧。有生之年，不要错过。</p>
+                <img src="t2.jpg" alt="t2.jpg diss"/>
+            </div>
+            <div class="picture">
+                <h1>风景</h1>
+                <div class="pic">
+                <p>旅行的意义<p/>
+                <img src="t3.jpg" alt="t3.jpg diss"/>
+                </div>
+                <div class="pic">
+                <p>旅行的意义<p/>
+                <img src="t4.jpg" alt="t4.jpg diss"/></div>
+                <div class="pic">
+                <p>旅行的意义<p/>
+                <img src="t5.jpg" alt="t5.jpg diss"/></div>
+                <div class="pic">
+                <p>旅行的意义<p/>
+                <img src="t6.jpg" alt="t6.jpg diss"/></div>
+                <div class="pic">
+                <p>旅行的意义<p/>
+                <img src="t7.jpg" alt="t7.jpg diss"/></div>
+            </div>
+            <div class="three">
+                <h1>作者简介</h1>
+                <h2>神月离人</h2>
+                <img src="t8.jpg"/>
+                <p>百度百科 2017.8.31</p>
+                <p>
+                    神月离人，性别年龄成迷的处女座生物，游荡在澳洲的中国原产物。
+                </p>
+                <p>
+                    最爱的杂志是存折，最大的食粮是美人。懒惰到<b>令人发指</b>，只偶尔在编辑和读者的鞭策下笔耕不辍，但有着令人抓狂的修文癖。
+                    爱旅游，爱美食，爱父母，爱朋友，爱败家，爱这个世界上真实而美好的一切，故喜欢残缺，欣赏个性，自认不会写完美人物，笔下皆是爱恨分明，缺优明晰之角，一不小心会让读者联想起身边之人。
+                    性格诡异，常常为吃而不远千里，食量更让祖国人民担忧饥荒问题。
+                    坚持幸福，拒绝悲剧。文笔恶搞，快意中却更多生活感，字里行间里尽流露现实的残酷。
+                    前一刻诙谐幽默，下一时肝肠寸断。云霄飞车般跌宕起伏，清茶入口似回甘微涩。
+                    无规却有距的风格，常被读者称为冰火二重天，是只矛盾而又令人抽搐的稀有生物。
+                    执生花妙笔，游走在文字边缘，嗜写青春成长年华里的爱恨与离别。静伫听神诉，月照离人故。
+                </p>
+                <ol>
+                    <li>爱旅游</li>
+                    <li>爱美食</li>
+                    <li>爱父母</li>
+                    <li>爱朋友</li>
+                    <li>爱败家</li>
+                </ol>
+                <p>作品集:</p>
+                <table border="1">
+                    <tr>
+                        <th>年份</th>
+                        <th>作品</th>
+                        <th>完成度</th>
+                    </tr>
+                    <tr>
+                        <td>2007年</td>
+                        <td>颖武元天1,2</td>
+                        <td><a href="http://www.baidu.com">龙门书局出版</a></td>
+                    </tr>
+                    <tr>
+                        <td>2009年</td>
+                        <td>来，给熊猫笑一个</td>
+                        <td><a href="http://www.baidu.com">海南出版社出版</a></td>
+                    </tr>
+                    <tr>
+                        <td>2010年</td>
+                        <td>指末的幸福</td>
+                        <td><a href="http://www.baidu.com">蝴蝶季策划出版</a></td>
+                    </tr>
+                    <tr class="total">
+                        <td>总计</td>
+                        <td colspan="2">33本</td>
+                    </tr>
+                </table> 
+            </div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <div class="bottom"><p>版权所有©</p></div>
+</div>
+</html>
